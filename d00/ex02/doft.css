@@ -1,0 +1,174 @@
+body {
+	background-color: #505050;
+	font-family: verdana;
+	font-color: black;
+}
+
+#all_frames
+{
+	margin: auto;
+	width: 1420;
+}
+
+.frame {
+    border-radius: 10px;
+    background: #909090;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+	box-shadow: 10px 10px 10px black;
+
+}
+
+.frame.top {
+	margin-top: 19px;
+	width: 100%;
+	box-sizing: border-box;
+	height: 138px;
+	position: relative;
+	z-index: 1;
+}
+
+.frame.middle {
+	float: left;
+	margin-top: 20px;
+	width: 1020px;
+	height: 582px;
+	box-sizing: border-box;
+	z-index: -1;
+}
+
+.frame.vertical {
+	float: left;
+	margin: 20px 30px 0px 30px;
+	width: 140px;
+	height: 425px;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 1;
+}
+
+.frame.green {
+	background: #88FF89;
+	width: 520px;
+	height: 170px;
+	box-sizing: border-box;
+	position: relative;
+	top: 525px;
+	left: -45px;
+	z-index: 0;
+}
+
+.left_button {
+	width: 70px;
+	margin: auto;
+	display: block;
+}
+
+.left_button.hand {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 5px;
+	border-style: solid;
+	border-color: red;
+}
+
+.right_button {
+	width: 70px;
+	margin: auto;
+	display: block;
+}
+
+.right_button.brick {
+	position: relative;
+	left: -10px;
+	top: 7px;
+	width: 120px;
+	height: 70px;
+	background-image: url('resources/brick.jpg');
+}
+
+.text_in_border {
+	position: relative;
+	top: -595px;
+	left: -10px;
+	font-size: 16;
+}
+
+#big_text {
+	font-size: 30;
+}
+
+#text_shadow {
+	text-shadow: 5px 5px 5px #ff0000;
+}
+
+#monitor {
+	position: relative;	
+	left: 770px;
+	top: -250px;
+	width: 200px;
+	height: 150px;
+}
+
+#chair {
+	position: relative;	
+	left: 330px;
+	top: -390px;
+	width: 100px;
+	height: 200px;
+}
+
+#main_image {
+	width: 102%;
+	margin: auto;
+	position: relative;
+	left: -9px;
+	top: -10px;
+}
+
+#logo {
+	width: 425px;
+	position: relative;
+	left: -10px;
+	top: -45px;
+}
+
+#loupe {
+	width: 255px;
+	position: relative;
+	left: 680px;
+	top: -5px;
+}
+
+#reload {
+	width: 20px;
+	position: relative;
+	left: 675px;
+	top: -135px;
+}
+
+#close {
+	width: 20px;
+	position: relative;
+	left: 645px;
+	top: -40px;
+}
+
+input[type=text], select {
+    width: 380px;
+	height: 20px;
+	margin-top: 3px;
+	margin-left: 5px;
+	margin-right: 5px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+input[type=button] {
+	width: 75px;
+	height: 20px;
+	position: relative;
+    background-color: #eeeeee;
+    cursor: pointer;
+}
