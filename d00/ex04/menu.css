@@ -1,39 +1,119 @@
-body{
-    font-family:Arial;
+.onclick-menu {
+    position: relative;
+    display: inline-block;
+}
+.onclick-menu:before {
+	background-color: #aaaaaa;
+	position: relative;
+	width: 200px;
+	height: 20px;
+	top: 0px;
+	left: 0px;
+	padding: 0px 0px 0px 0px;
+	margin: 1px 0px 1px 0px;
+	display: inline-block;	
+	text-align: center;
+
 }
 
-a, a:hover, a:visited, a:focus{
-    color:inherit;
+.onclick-menu.button1:before {
+	content: "Sandwitch";
+}
+
+.onclick-menu.button2:before {
+	content: "Burger";
+}
+
+.onclick-menu.button3:before {
+	content: "Pizza";
+}
+
+.onclick-menu:focus {
+    /* clicking on label should toggle the menu */
+    pointer-events: none;
+	outline: none;
+}
+.onclick-menu:focus .onclick-menu-content {
+    /*  opacity is 1 in opened state (see below) */
+    opacity: 1;
+    visibility: visible;
+	height: 88px;
+    /* don't let pointer-events affect descendant elements */
+    pointer-events: auto;
+	display: block;
+}
+.onclick-menu-content {
+    position: relative;
+    z-index: 1;
+
+    /* use opacity to fake immediate toggle */
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.5s;
+	padding: 0px 0px 0px 0px;
+	border-color: #aaaaaa;
+	margin: 0px 0px 0px 0px;
+	height: 0px;
+	display: none;
+}
+
+
+
+.button {
+	background-color: #dddddd;
+	position: relative;
+	width: 200px;
+	height: 22px;
+	padding: 0px 0px 0px 0px;
+	border-style: solid;
+	border-width: 1px 0px 1px 0px;
+	border-color: #ffffff;
+	margin: 0px 0px 0px 0px;
+	text-align: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 100px;
+	left: 200px;
+	top: 0px;
+	padding: 0px 0px 0px 0px;
+	margin: -2px 0px 0px 0px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 0px 0px 0px 0px;
     text-decoration: none;
-}
-
-ul.menu li{
-    display: none;
-    padding:10px 10px 10px 20px;
-    border-top:1px solid #8dbdb2;
-}
-
-ul.menu li:first-child{
     display: block;
-    border-top:0px;
-    padding-left:10px;
+	height: 20px;
+	border-style: solid;
+	border-width: 1px 0px 1px 0px;
+	border-color: #ffffff;
 }
 
-ul.menu:hover li{
-    display:block;
+.dropdown-content a:hover {
+	background-color: #ddd;
 }
 
-ul.menu:hover li:first-child{
-    background-color: #8dbdb2;
+.dropdown:hover .dropdown-content {
+	display: block;
 }
 
-ul.menu{
-    background-color:#a3d7c7;
-    width:150px;
-    padding:0px;
-    float:left;
+.dropdown:hover .button {
+	background-color: #eeeeee;
 }
 
-p{
-    color:red;
+#all {
+	position: relative;
+	width: 300px;
 }

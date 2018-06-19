@@ -1,0 +1,150 @@
+html {
+	font-size: 10px;
+}
+
+table {
+	width: 100%;
+	height: 500px;
+	margin: auto;
+	opacity: 0.9;
+	max-width: 1000px;
+	min-width: 300px;
+}
+
+@media only screen and (max-height: 500px) {
+	table {
+		width: 100%;
+		height: 400px;
+		margin: auto;
+		opacity: 0.9;
+		max-width: 1000px;
+		min-width: 300px;
+	}
+}
+@media only screen and (max-height: 400px) {
+	table {
+		width: 100%;
+		height: 300px;
+		margin: auto;
+		opacity: 0.9;
+		max-width: 1000px;
+		min-width: 300px;
+
+	}
+}
+@media only screen and (max-height: 300px) {
+	table {
+		width: 100%;
+		height: 200px;
+		margin: auto;
+		opacity: 0.9;
+		max-width: 1000px;
+		min-width: 300px;
+
+	}
+}
+
+tr {
+	height: 10%;
+}
+td {
+	position: relative;
+	width: 5%;
+}
+#random {
+	width: 100%;
+}
+.image {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;	
+	opacity: 0.5;
+	height: 100%;
+
+
+}
+.elem {
+	font-size: 1vw;
+	font-family: "Verdana", sans-serif;
+	color: black;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+}
+.number {
+	font-size: 0.7vw;
+	width: 100%;
+	text-align: left;
+	position: absolute;
+	bottom: 2px;
+	left: 2px;
+}
+.weight {
+	font-size: 0.7vw;
+	width: 100%;
+	text-align: right;
+	position: absolute;
+	top: 2px;
+	right: 2px;	
+}
+
+@media only screen and (min-width: 900px) {
+	.elem {
+		font-size: 10px;
+		font-family: "Verdana", sans-serif;
+		color: black;	
+		width: 100%;
+		text-align: center;	
+		font-weight: bold;
+	}
+	.number {
+		font-size: 7px;
+		width: 100%;
+		text-align: left;
+		position: absolute;
+		bottom: 2px;
+		left: 2px;
+	}
+	.weight {
+		font-size: 7px;
+		width: 100%;
+		text-align: right;
+		position: absolute;
+		top: 2px;
+		right: 2p
+		}
+}
+
+.reactive_nonmetal {
+	background-color: #ffff99;
+}
+.noble_gas {
+	background-color: #66ffff;
+}
+.alkali_metal {
+	background-color: #ff5050;
+}
+.alkaline_earth_metal {
+	background-color: #ffcc66;
+}
+.transition_metal {
+	background-color: #ff9999;
+}
+.post_transition_metal {
+	background-color: #777777;
+}
+.actinide {
+	background-color: #ff99aa;
+}
+.lanthanide {
+	background-color: #ff99ff;
+}
+.metalloid {
+	background-color: #cccc00;
+}
+.unknown {
+	background-color: #aaaaaa;
+}

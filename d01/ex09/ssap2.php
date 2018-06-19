@@ -1,58 +1,41 @@
 #!/usr/bin/php
 <?PHP
 
-var_dump($argv);
-/*
-function	cmp($a, $b)
-{
-	$len = strlen($a);
-	$len2 = strlen($b);
-
-	for ($i = 0; $i != $len, $i != $len2; $i++)
-	{
-		if (ctype_alnum($a[$i]) && !ctype_alnum($b[$i]))
-		{
-			if (!is_numeric($a[$i]) && is_numeric($b[$i]))
-				return 1;
-			else
-			{
-				if ($a[$i] < $b[$i])
-					return -1;
-			}
-			return 1;
-		}
-//		if ($a[$i] < $b[$i])
-//			return -1;
-//		else if ($a[$i] > $b[$i])
-//			return 1;
+function	cmp($a, $b) {
+	$i = 0;
+	while ($a[$i] || $b[$i]) {
+		$x = ord($a[$i]);
+		$y = ord($b[$i]);
+		if ($x >= 65 && $x <= 90)
+			$x += 32;
+		if ($y >= 65 && $y <= 90)
+			$y += 32;
+		if ($x >= 97 && $x <= 122)
+			$x -= 200;
+		if ($x >= 48 && $x <= 57)
+			$x -= 100;
+		if ($y >= 97 && $y <= 122)
+			$y -= 200;
+		if ($y >= 48 && $y <= 57)
+			$y -= 100;
+		if ($x != $y)
+			return ($x < $y) ? -1 : 1;
+		$i++;
 	}
-	if ($len < $len2)
-		return -1;
-	else if ($len > $len2)
-		return 1;
 	return 0;
-
-	if ($a == $b) {
-		return 0;
-	}
-	return ($a < $b) ? -1 : 1;
- 
 }
- */
-//var_dump($argv);
 
-//$ret_arr = array();
+$ret_arr = array();
 
-//array_splice($argv, 0, 1);
-//foreach($argv as $x => $value) {
-//	$ret_arr = array_merge($ret_arr, array_filter(explode(" ", $value)));
-//}
+array_splice($argv, 0, 1);
+foreach($argv as $n => $value) {
+	$ret_arr = array_merge($ret_arr, array_filter(explode(" ", $value)));
+}
 
-//usort($ret_arr, "cmp");
-//sort($ret_arr);
-//foreach($argv as $x => $value) {
-//	echo $value, "\n";
-//}
-print_r($argv);
+usort($ret_arr, "cmp");
+
+foreach($ret_arr as $n => $value) {
+	echo $value, "\n";
+}
 
 ?>
